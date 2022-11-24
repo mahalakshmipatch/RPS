@@ -15,7 +15,12 @@ def showboard(p,c):
     print("")
 
 rps = ("rock","paper","scissors")
-rounds = int(input("How many rounds do you want to play? "))
+rounds = input("How many rounds do you want to play? ")
+if(rounds.isnumeric()):
+    rounds=int(rounds)
+else:
+    print("Invalid Input")
+    quit()
 print("")
 cScore = 0
 pScore = 0
